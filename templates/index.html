@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Prediction</title>
+</head>
+<body>
+    <h1>Estimate the total cost of your trip using our prediction tool</h1>
+    <form action="/predict" method="post">
+        <label for="km_travelled"> Distance in KM:</label>
+        <input type="text" id="km_travelled" name="km_travelled"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>The est cost for this Trip is: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
